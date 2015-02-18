@@ -1,4 +1,4 @@
-* {
+/** {
   padding:0;
   margin:0;
   font-family: 'Cuprum', sans-serif;
@@ -121,7 +121,6 @@ a {
   background-color: #ccc;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #FFF;
 }
@@ -153,7 +152,6 @@ ul {
   display: none;
 }
 
-/* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
   background-color: #4A4A4A;
@@ -220,4 +218,40 @@ span {
   .biopic {
     display: block;
   }
+}
+*/
+
+.row {
+  
+}
+
+#circle {
+  max-height: 400px;
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  right: 50%;
+  margin-right: -200px;
+}
+
+@-moz-keyframes rotatebox /*--for firefox--*/{
+
+    from{
+        -moz-transform:rotate(0deg);
+    }       
+    to{
+        -moz-transform:rotate(360deg);
+    }                       
+
+}
+
+@-webkit-keyframes rotatebox /*--for webkit--*/{
+
+    from{
+        -webkit-transform:rotate(0deg);
+    }       
+    to{
+        -webkit-transform:rotate(360deg);
+    }                       
+
 }

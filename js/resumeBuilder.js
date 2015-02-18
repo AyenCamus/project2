@@ -1,3 +1,24 @@
+$(document).ready(function(){
+    $("#clickCircle").click(function(){
+        $("#circle").css({
+
+        //for firefox
+        "-moz-animation-name":"rotatebox",
+        "-moz-animation-duration":"2s",
+        "-moz-animation-iteration-count":"1",
+            "-moz-animation-fill-mode":"forwards",
+
+        //for safari & chrome
+        "-webkit-animation-name":"rotatebox",
+        "-webkit-animation-duration":"2s",
+        "-webkit-animation-iteration-count":"1",
+        "-webkit-animation-fill-mode" : "forwards",
+
+        }).toggle("scale", {percent: 200}, 2000);
+       
+    });
+});
+
 //begin bio section---------------------------------------------
 var bio = {
   
