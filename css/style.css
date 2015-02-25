@@ -1,7 +1,25 @@
+/** {
+    border: 1px solid red !important;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+
 * {
   padding:0;
   margin:0;
   font-family: 'Cuprum', sans-serif;
+}
+
+.grid {
+  max-width: 100%;
+  margin: auto;
+  left: 50%;
+  right: 50%;
 }
 
 .clearfix {
@@ -11,36 +29,32 @@
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
+  padding: 0 5% 10px 5%;
 }
 
 body {
   background-color: #fff;
-}
-
-#main {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1300px;
+  margin: 10px 15% 10px 15%;
 }
 
 h1 {
-  font-size: 60px;
   color: #000;
+  position: relative;
+  width: 100%;
+  text-align: left;
 }
 
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #999;
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
-  color: #000000;
-  text-align: center;
+  margin-top: 40px;
 }
 
 h4 {
@@ -51,36 +65,30 @@ h4 {
 }
 
 h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-hr {
-
+  padding:5px 5% 0 5%;
 }
 
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #999;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #999;
   float: right;
 }
 
 p {
-  font-size: 14px;
-  color: #333333;
+  font-size: 17px;
+  color: #333;
   line-height: 21px;
 }
 
 a {
-  color: #1199C3;
+  color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -89,30 +97,32 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #000;
   line-height: 28px;
 }
 
 #skillsH3 {
-  color: #C13B37;
+  color: #c13b37;
   display: none;
+  text-align: center;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #f5ae23;
 }
 
 .orange-text {
+  font-size: 18px;
   color: #c13b37;
 }
 
 .white-text {
-  font-weight: bold;
+  font-size: 18px;
   color: #000;
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   padding-bottom: 10px;
   clear:both;
 }
@@ -123,7 +133,9 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #FFF;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
 }
 
 .flex-box {
@@ -135,28 +147,20 @@ a {
   padding: 10px;
 }
 
-.center-content {
-  padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
-}
-
 ul {
   list-style-type: none;
 }
 
 .biopic {
   float: left;
-  padding: 10px;
-  width: 200px;
+  width: 250px;
   display: none;
 }
 
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
-  background-color: #4A4A4A;
+  background-color: #4a4a4a;
   text-align: right;
   padding: 3px;
   margin: 1px;
@@ -170,8 +174,22 @@ ul {
 }
 
 span {
-  font-size: 40px;
-  padding: 5px;
+  font-size: 50px;
+
+  margin-left: 10px;
+}
+
+#name {
+  font-size: 75px;
+}
+
+#title {
+  color: #ca785c;
+}
+
+.nameTitle {
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 1;
 }
 
 #letsConnect {
@@ -220,4 +238,39 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.skill-item {
+  display: inline;
+}
+
+#skills {
+  margin-top: 10px;
+}
+
+#topContacts {
+  padding-top: 20px;
+}
+
+td {
+  padding: 5px 50px 5px 50px;
+
+}
+
+.online-entry {
+  font-size: 16px;
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+
+#onlineschool {
+  color: #999;
+  font-size: 24px;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+.projectImg {
+  width: 200px;
+  padding: 10px 0 10px 0;
 }
