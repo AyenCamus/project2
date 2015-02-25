@@ -44,22 +44,27 @@ var bio = {
     $("#header").prepend(formattedRole);
 
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#topContacts").append(formattedMobile);
+    $("#1").append(formattedMobile);
 
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#topContacts").append(formattedEmail);
+    $("#1").append(formattedEmail);
 
     var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.gitHub);
-    $("#topContacts").append(formattedGitHub);
+    $("#2").append(formattedGitHub);
+
+    var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
+    $("#2").append(formattedBlog);
 
     var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    $("#topContacts").append(formattedTwitter);
+    $("#2").append(formattedTwitter);
 
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts").append(formattedLocation);
+    $("#1").append(formattedLocation);
 
-    var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedWelcomeMsg);
+    //I didn't want a welcome message!-------------
+
+    // var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+    // $("#header").append(formattedWelcomeMsg);
 
     if (bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart); 
@@ -83,7 +88,7 @@ var education = {
     {
       "name": "University of Arizona",
       "location": "Tucson, AZ",
-      //"degree": "",
+      "degree": "degree, not completed",
       "major": ["French, Creative Writing"],
       "dates": "2009-2011",
       "url": "www.arizona.edu"
@@ -159,7 +164,7 @@ var work = {
     },
     {
       "employer": "A Company",
-      "title": "Worst Employee",
+      "title": "Employee of the Week",
       "location": "Tucson, AZ",
       "dates": "2012-2013",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
@@ -190,16 +195,16 @@ var work = {
 var projects = {
   "projects": [
     {
-      "title": "N/A",
-      "dates": "N/A",
-      "description": "N/A",
-      "images": "",
+      "title": "A Strange Project",
+      "dates": "1800",
+      "description": "A project for which I time traveled to a time in the past.",
+      "images": "images/watch.jpg",
     },
     {
-      "title": "N/A",
-      "dates": "N/A",
-      "description": "N/A",
-      "images": ""
+      "title": "An Even Stranger Project",
+      "dates": "3024",
+      "description": "A project for which I time traveled to the future.",
+      "images": "images/hourglass.jpg"
     }
   ],
   "display": function() {
@@ -215,12 +220,8 @@ var projects = {
       var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
       $(".project-entry:last").append(formattedDescription);
 
-      if (projects.projects[project].images.length > 0) {
-        for (image in projects.projects[project].images) {
-          var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-        $(".project-entry:last").append(formattedImage);
-        }
-      }
+      var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+      $(".project-entry:last").append(formattedImage);
     }
   }
 };
